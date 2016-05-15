@@ -1,0 +1,25 @@
+extends auth
+
+block auth
+	a(href="http://www.silverpush.co")
+		img.center-block(src="../img/logo_sc.png" , style="margin-top:30px;")
+	.row.info-content
+		.col-lg-4.col-lg-offset-4.col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1.animated.fadeInLeftBig
+			.panel.panel-primary.one-edge-shadow
+				.panel-heading
+					h3.panel-title SIGN UP
+				.panel-body
+					.col-md-12(style="border-right: 1px solid rgba(14, 245, 180, 0.4);")
+						form.form-vertical(action="/users", method="post")
+							p.error= message
+							input.form-control.pad-control#name(type='text', name="name", placeholder='Full Name', required)
+							input.form-control.pad-control#email(type='email', name="email", placeholder='Email', required)
+							input.form-control.pad-control#username(type='text', name="username", placeholder='Username', required)
+							input.form-control.pad-control#password(type='password', name="password", placeholder='Password', required)
+							div
+								button.btn.btn-info.pad-control(type='submit') Create My Id
+			.text-center
+				small.text-center By submitting this form and creating an account, you accept our Terms and Conditions
+			.pad-control.text-center
+				p Already have an Account ?  
+					a.btn.btn-success.btn-xs(href="signin") SIGN IN   

@@ -1,0 +1,23 @@
+<section data-ng-controller="GossipController" class="container" ng-init="getactivities()">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 animated fadeInUp">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<h2>Overview</h2>
+
+			<h4 style="margin-top:40px;">Update Status</h4>
+
+			<textarea class="form-control" ng-model="updatestatusmodel" placeholder="Update your status.... " rows="5" ng-change="statuschange(updatestatusmodel)"></textarea>
+			<button class="btn btn-primary pull-right" style="margin-top:20px;" ng-disabled="statuserr" ng-click="updatestatus(updatestatusmodel)">Update</button>
+		</div>
+
+		<h2 style="margin-top: 40px;">Activities</h2>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;" ng-repeat="activity in activities" ng-if="activitylength != 0; ">
+			<!-- <p>Updated status to sunny</p> -->
+			<ul>
+				<li style="font-size: 17px;">{{activity.status}}</li>
+			</ul>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;" ng-if="activitylength == 0; ">
+			<h2 class="text-center">You have no notifications.</h2>
+		</div>
+	</div>
+</section>

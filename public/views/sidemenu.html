@@ -1,0 +1,19 @@
+<div id="sidebar-wrapper" data-ng-controller="menuController">
+    <ul class="sidebar-nav">
+        <li>
+            <a href="/" ng-class="{active: isActive('/')}">
+                <i class="fa fa-th-large"></i>&nbsp;&nbsp;Overview
+            </a>
+        </li>
+        <li>
+            <a href="#!/follow" ng-class="{active: isActive('/follow')}">
+                <i class="fa fa-th-large"></i>&nbsp;&nbsp;Follow
+            </a>
+        </li>
+        <li>
+            <a href="#!/activity" ng-class="{active: isActive('/activity')}">
+                <i class="fa fa-th-large"></i>&nbsp;&nbsp;Activity
+            </a>
+        </li>
+    </ul>
+</div>

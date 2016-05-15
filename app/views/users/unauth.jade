@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block content
+	a(href="http://www.silverpush.co")
+		img.center-block(src="../img/logo_sc.png" , style="margin-top:30px;")
+	.row.info-content
+		.col-lg-4.col-lg-offset-4.col-md-4.col-md-offset-4.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1.animated.fadeInLeftBig
+			.panel.panel-danger.one-edge-shadow
+				.panel-heading
+					h3.panel-title ERROR
+				.panel-body 
+					h2.text-center Unauthorized Access !
+			.pad-control.text-center
+				p Switch to Signin ? 
+					a.btn.btn-success.btn-xs(href="signin") SIGN IN 
